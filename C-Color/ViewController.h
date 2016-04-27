@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 - (IBAction)openFile:(id)sender;
 - (IBAction)flashlight:(id)sender;
 - (IBAction)test1:(id)sender;

@@ -77,20 +77,35 @@ AVCaptureStillImageOutput *stillImageOutput;
     imagePickerController.sourceType =  UIImagePickerControllerSourceTypePhotoLibrary;
     
     [self presentViewController:imagePickerController animated:YES completion:^{
-        //         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,     NSUserDomainMask, YES);
-        //         NSString *documentsDirectory = [paths objectAtIndex:0];
-        //         NSString *savedImagePath = [documentsDirectory stringByAppendingPathComponent:@"savedImage.png"];
-        //         UIImage *image = _imageView.image; // imageView is my image from camera
-        //         NSData *imageData = UIImagePNGRepresentation(image);
-        //         [imageData writeToFile:savedImagePath atomically:NO];
-        //
         /*
-         CoreController *vc2 = [[CoreController alloc] init]; // create object of VC2
-         // [self.navigationController pushViewController:vc2 animated:YES];
-         [self.navigationController presentViewController:vc2 animated:YES completion:nil];
-         */
+                 NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,     NSUserDomainMask, YES);
+                 NSString *documentsDirectory = [paths objectAtIndex:0];
+                 NSString *savedImagePath = [documentsDirectory stringByAppendingPathComponent:@"savedImage.png"];
+                UIImage *image = _imageView.image; // imageView is my image from camera
+                NSData *imageData = UIImagePNGRepresentation(image);
+                 [imageData writeToFile:savedImagePath atomically:NO];
+        */
+//        UIImageView *imageView = [[UIImageView alloc] init];
+//        imageView.image = (UIImage*) [info objectForKey:UIImagePickerControllerOriginalImage];
+//        
+//         CoreController *vc2 = [[CoreController alloc] init]; // create object of VC2
+//         // [self.navigationController pushViewController:vc2 animated:YES];
+//         [self.navigationController presentViewController:vc2 animated:YES completion:nil];
         
+       
     }];
+
+}
+
+- (void)imagePickerController:(UIImagePickerController *) Picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    UIImage *image=[info objectForKey:UIImagePickerControllerOriginalImage];
+    appDelegate.img = UIImageJPEGRepresentation(image,1.0);
+    [Picker dismissModalViewControllerAnimated:YES];
+
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    CoreController *cc = [sb instantiateViewControllerWithIdentifier:@"CoreController"];
+    [self presentViewController:cc animated:YES completion:nil];
 
 }
 
