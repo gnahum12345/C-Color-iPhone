@@ -138,7 +138,7 @@ AVCaptureStillImageOutput *stillImageOutput;
             [device unlockForConfiguration];
         }
     }
-    
+     
     
     
     NSString *message = @"";
