@@ -15,7 +15,7 @@
 		A4E7E3D61CCFDABA008BFEFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E7E3D41CCFDABA008BFEFD /* LaunchScreen.storyboard */; };
 		A4E7E3E11CCFDABA008BFEFD /* C_ColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7E3E01CCFDABA008BFEFD /* C_ColorTests.m */; };
 		A4E7E3EC1CCFDABA008BFEFD /* C_ColorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7E3EB1CCFDABA008BFEFD /* C_ColorUITests.m */; };
-		A4E7E4031CD012AF008BFEFD /* CoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7E4011CD012AF008BFEFD /* CoreController.m */; };
+		A4E7E4081CD0652B008BFEFD /* CoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7E4061CD0652B008BFEFD /* CoreController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +52,8 @@
 		A4E7E3E71CCFDABA008BFEFD /* C-ColorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "C-ColorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E7E3EB1CCFDABA008BFEFD /* C_ColorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = C_ColorUITests.m; sourceTree = "<group>"; };
 		A4E7E3ED1CCFDABA008BFEFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A4E7E4011CD012AF008BFEFD /* CoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreController.m; path = ../../../../../Downloads/CoreController.m; sourceTree = "<group>"; };
-		A4E7E4021CD012AF008BFEFD /* CoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreController.h; path = ../../../../../Downloads/CoreController.h; sourceTree = "<group>"; };
+		A4E7E4061CD0652B008BFEFD /* CoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreController.m; sourceTree = "<group>"; };
+		A4E7E4071CD0652B008BFEFD /* CoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,13 +104,13 @@
 		A4E7E3C51CCFDABA008BFEFD /* C-Color */ = {
 			isa = PBXGroup;
 			children = (
+				A4E7E4061CD0652B008BFEFD /* CoreController.m */,
+				A4E7E4071CD0652B008BFEFD /* CoreController.h */,
 				A4E7E3C91CCFDABA008BFEFD /* AppDelegate.h */,
 				A4E7E3CA1CCFDABA008BFEFD /* AppDelegate.m */,
 				A4E7E3CC1CCFDABA008BFEFD /* ViewController.h */,
 				A4E7E3CD1CCFDABA008BFEFD /* ViewController.m */,
 				A4E7E3CF1CCFDABA008BFEFD /* Main.storyboard */,
-				A4E7E4011CD012AF008BFEFD /* CoreController.m */,
-				A4E7E4021CD012AF008BFEFD /* CoreController.h */,
 				A4E7E3D21CCFDABA008BFEFD /* Assets.xcassets */,
 				A4E7E3D41CCFDABA008BFEFD /* LaunchScreen.storyboard */,
 				A4E7E3D71CCFDABA008BFEFD /* Info.plist */,
@@ -276,7 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4E7E4031CD012AF008BFEFD /* CoreController.m in Sources */,
+				A4E7E4081CD0652B008BFEFD /* CoreController.m in Sources */,
 				A4E7E3CE1CCFDABA008BFEFD /* ViewController.m in Sources */,
 				A4E7E3CB1CCFDABA008BFEFD /* AppDelegate.m in Sources */,
 				A4E7E3C81CCFDABA008BFEFD /* main.m in Sources */,
