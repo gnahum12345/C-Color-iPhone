@@ -265,7 +265,7 @@ bool isBlack = true;
     // resizing image
  
     CGRect scaledImageRect = CGRectZero;
-    CGSize newSize = CGSizeMake(375.0f, 394.0f);
+    CGSize newSize = CGSizeMake(375.0f, 375.0f);
     CGImageRef oImageRef = [originalImage CGImage];
     
     NSUInteger oWidth = CGImageGetWidth(oImageRef);
@@ -278,10 +278,12 @@ bool isBlack = true;
     
     scaledImageRect.size.width = oWidth * aspectRatio;
     scaledImageRect.size.height = oHeight * aspectRatio;
-    scaledImageRect.origin.x = (newSize.width - scaledImageRect.size.width) / 2.0f;
-    scaledImageRect.origin.y = (newSize.height - scaledImageRect.size.height) / 2.0f;
+   // scaledImageRect.origin.x = (newSize.width - scaledImageRect.size.width) / 2.0f;
+   // scaledImageRect.origin.y = (newSize.height - scaledImageRect.size.height) / 2.0f;
     
-    UIGraphicsBeginImageContextWithOptions( newSize, NO, 0 );
+    CGSize shrinkedSize = CGSizeMake(scaledImageRect.size.width, scaledImageRect.size.height);
+
+    UIGraphicsBeginImageContextWithOptions( shrinkedSize, NO, 0 );
     [originalImage drawInRect:scaledImageRect];
     _coreImageView.image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
